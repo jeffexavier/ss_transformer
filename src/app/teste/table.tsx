@@ -585,7 +585,7 @@ export default function TableItems({ tableHeaders, file, inputTableHeaders }: an
                   <SelectItem key={inputTableHeadersIndex} className="text-black">
                     {inputTableHeadersItem}
                   </SelectItem>
-                ))}
+                ))} 
               </Select>
             </TableColumn>
           ))}
@@ -594,7 +594,7 @@ export default function TableItems({ tableHeaders, file, inputTableHeaders }: an
           {file.map((itemFile:any, indexFile:number) => (
             <TableRow key={indexFile}>
               {itemFile.map((item:any, index:number) => (
-                <TableCell>{item}</TableCell>
+                <TableCell key={index}>{item}</TableCell>
               ))}
             </TableRow>
           ))}
